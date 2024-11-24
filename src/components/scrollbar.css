@@ -1,0 +1,10 @@
+.scrollable {
+  overflow-y: scroll;
+}
+.scrollable::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+}
+.scrollable {
+  scrollbar-width: none; /* For Firefox */
+}

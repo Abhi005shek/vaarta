@@ -1,0 +1,52 @@
+
+:root {
+    --primary-color: #fa5252;  /* Default primary color */
+    --secondary-color: #ffa8a8; /* Default secondary color */
+  }
+.div-left{
+ position:relative;
+ background:#87CEFA;  
+ width:300px;
+ padding:10px; 
+ border-top-right-radius: 15px;
+ border-bottom-left-radius: 15px;
+ border-bottom-right-radius: 15px;
+ margin:10px;
+}
+.div-left:before{
+ content:"";
+ position:absolute;
+ width:0px;
+ height:0px;
+ border: 10px solid;
+ /* border-color: white white transparent transparent; */
+ /* border-color: #ffa8a8 #ffa8a8 transparent transparent; */
+ border-color: var(--secondary-color) var(--secondary-color) transparent transparent;
+ left:-10px;
+ top:0px;
+ z-index: 0;
+
+}
+.div-right{
+ position:relative;
+ background:#87CEFA;  
+ width:300px;
+ padding:10px; 
+ /* border-radius:25px; */
+ border-top-left-radius: 15px;
+ border-bottom-left-radius: 15px;
+ border-bottom-right-radius: 15px;
+}
+.div-right:before{
+ content:"";
+ position:absolute;
+ width:0px;
+ height:0px;
+ border: 5px solid;
+ /* border-color: #9775fa transparent transparent #9775fa ; */
+ /* border-color: #fa5252 transparent transparent #fa5252 ; */
+ border-color: var(--primary-color) transparent transparent var(--primary-color) ;
+ right:-10px;
+ top:0px;
+ z-index: 0;
+}
