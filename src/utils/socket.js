@@ -1,6 +1,6 @@
 import { io } from "socket.io-client";
 
-const SERVER_URL = "http://localhost:5000/";
+const SERVER_URL = import.meta.env.VITE_API_URL;
 const token = localStorage.getItem("token");
 let socket; // This will hold our socket instance
 
@@ -8,7 +8,7 @@ let socket; // This will hold our socket instance
 const getSocket = () => {
   if (!socket) {
     socket = io(SERVER_URL, {
-        query: {token},
+      query: { token },
       autoConnect: false, // Optional: prevents auto-connection at initialization
     });
     socket.on("connect", () => {
