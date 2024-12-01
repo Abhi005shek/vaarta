@@ -36,7 +36,7 @@ function Login() {
       localStorage.setItem("theme", user?.theme);
       if (user.success) {
         navigate("/app");
-        window.location.reload();
+        //window.location.reload();
       }
     } catch (error) {
       console.log("Error while login: ", error);
