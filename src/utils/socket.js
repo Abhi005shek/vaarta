@@ -1,6 +1,6 @@
 import { io } from "socket.io-client";
 
-const SERVER_URL = import.meta.env.VITE_API_URL;
+const SERVER_URL = import.meta.env.VITE_SOCKET_URL;
 const token = localStorage.getItem("token");
 let socket; // This will hold our socket instance
 
