@@ -36,7 +36,7 @@ function Login() {
       if (user.success) {
         localStorage.setItem("token", user.token);
       localStorage.setItem("theme", user?.theme);
-        navigate("/app");
+        navigate("/");
         window.location.reload();
       }
     } catch (error) {
