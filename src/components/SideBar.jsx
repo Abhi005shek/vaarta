@@ -4,6 +4,8 @@ import ChatListItem from "./ChatListItem";
 import "./sidebar.css";
 import MenuIcon from "@mui/icons-material/Menu";
 
+const SERVER_URL = import.meta.env.VITE_API_URL;
+
 function SideBar({ isSidebar, setIsSidebar, setReceiver }) {
   const [chats, setChats] = useState([]);
 
@@ -17,7 +19,7 @@ function SideBar({ isSidebar, setIsSidebar, setReceiver }) {
           return;
         }
 
-        const response = await fetch("http://localhost:5000/chatrooms", {
+        const response = await fetch(`${SERVER_URL}chatrooms`, {
           headers: {
             Authorization: `Bearer ${token}`,
           },
