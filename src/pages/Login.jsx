@@ -32,11 +32,12 @@ function Login() {
         body: JSON.stringify(data),
       });
       const user = await response.json();
-      localStorage.setItem("token", user.token);
-      localStorage.setItem("theme", user?.theme);
+      
       if (user.success) {
+        localStorage.setItem("token", user.token);
+      localStorage.setItem("theme", user?.theme);
         navigate("/app");
-        //window.location.reload();
+        window.location.reload();
       }
     } catch (error) {
       console.log("Error while login: ", error);
